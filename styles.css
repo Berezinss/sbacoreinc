@@ -407,8 +407,47 @@ section{padding:100px 0}
 
 
 
+
 /* =====================================
    REAL RESULTS — FINAL LAYOUT
+   ===================================== */
+
+/* MAIN HEADING */
+
+#results .results-heading {
+    max-width: 100%;
+    margin: 0 auto 46px;
+    text-align: center;
+}
+
+#results .results-heading .eyebrow {
+    margin-bottom: 16px;
+    letter-spacing: .20em;
+}
+
+#results .results-heading h2 {
+    margin: 0;
+    font-size: clamp(32px, 3.8vw, 52px);
+    font-weight: 900;
+    line-height: 1.15;
+    letter-spacing: -.04em;
+    white-space: nowrap;
+}
+
+#results .results-heading h2 span {
+    color: #bb850d;
+}
+
+#results .results-description {
+    max-width: 720px;
+    margin: 18px auto 0;
+    font-size: 16px;
+    line-height: 1.65;
+    color: #666c69;
+}
+
+/* =====================================
+   GRID — VIDEO LEFT / PHOTO RIGHT
    ===================================== */
 
 #results .results-grid {
@@ -418,7 +457,7 @@ section{padding:100px 0}
     align-items: stretch;
 }
 
-/* VIDEO — LEFT */
+/* VIDEO CARD */
 
 #results .results-video {
     grid-column: 1;
@@ -432,16 +471,7 @@ section{padding:100px 0}
     overflow: hidden;
 }
 
-#results .results-video video {
-    display: block;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: contain;
-    background: #101312;
-    border-radius: 16px;
-}
-
-/* PHOTO — RIGHT */
+/* PHOTO CARD */
 
 #results .comparison {
     grid-column: 2;
@@ -451,116 +481,16 @@ section{padding:100px 0}
     background: #ffffff;
     border-radius: 24px;
     box-shadow: var(--shadow);
+    overflow: hidden;
 }
 
-#results .comparison img {
-    display: block;
-    width: 100%;
-    border-radius: 16px;
-}
-
-/* BENEFITS — BOTTOM */
-
-#results .benefits {
-    grid-column: 1 / -1;
-    grid-row: 2;
-    width: 100%;
-    height: auto;
-    display: block;
-    padding: 42px 48px;
-    background: #101312;
-    border-radius: 24px;
-}
-
-#results .benefits ul {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 24px;
-}
-
-#results .benefits li {
-    display: block;
-    padding-top: 22px;
-    border-top: 1px solid rgba(255,255,255,.15);
-}
-
-#results .benefits li:first-child {
-    padding-top: 22px;
-    border-top: 1px solid rgba(255,255,255,.15);
-}
-
-/* MOBILE */
-
-@media (max-width: 700px) {
-
-    #results .results-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    #results .results-video {
-        grid-column: 1;
-        grid-row: 1;
-    }
-
-    #results .comparison {
-        grid-column: 1;
-        grid-row: 2;
-    }
-
-    #results .benefits {
-        grid-column: 1;
-        grid-row: 3;
-        padding: 28px 22px;
-    }
-
-    #results .benefits ul {
-        grid-template-columns: 1fr;
-    }
-
-  
 /* =====================================
-   REAL RESULTS — TEXT REFINEMENT
+   MATCHING CARD HEADINGS
    ===================================== */
-
-/* Unified section heading */
-
-#results .results-heading {
-    max-width: 780px;
-    margin: 0 auto 46px;
-    text-align: center;
-}
-
-#results .results-heading .eyebrow {
-    margin-bottom: 18px;
-    letter-spacing: .22em;
-}
-
-#results .results-heading h2 {
-    margin: 0;
-    font-size: clamp(42px, 5vw, 68px);
-    line-height: 1.05;
-    letter-spacing: -.045em;
-    font-weight: 850;
-}
-
-#results .results-heading h2 span {
-    color: #bb850d;
-}
-
-#results .results-description {
-    max-width: 620px;
-    margin: 22px auto 0;
-    font-size: 17px;
-    line-height: 1.7;
-    color: #666c69;
-}
-
-/* Matching headings for both cards */
 
 #results .results-video-header,
 #results .results-photo-header {
-    padding: 12px 8px 24px;
+    padding: 12px 8px 20px;
     text-align: left;
 }
 
@@ -576,21 +506,125 @@ section{padding:100px 0}
 
 #results .results-video-header h3,
 #results .results-photo-header h3 {
-    margin: 0 0 8px;
+    margin: 0 0 10px;
     font-size: 22px;
-    line-height: 1.15;
+    font-weight: 900;
+    line-height: 1.2;
     letter-spacing: -.035em;
 }
 
 #results .results-video-header p,
 #results .results-photo-header p {
     margin: 0;
-    color: #777d79;
+    color: #666c69;
     font-size: 14px;
+    font-weight: 400;
     line-height: 1.5;
 }
 
-/* Mobile typography */
+/* =====================================
+   VIDEO AND PHOTO
+   ===================================== */
+
+#results .results-video video {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    background: #101312;
+    border-radius: 16px;
+}
+
+#results .comparison img {
+    display: block;
+    width: 100%;
+    border-radius: 16px;
+}
+
+/* =====================================
+   BENEFITS — FULL WIDTH BELOW
+   ===================================== */
+
+#results .benefits {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 42px 48px;
+    background: #101312;
+    color: #ffffff;
+    border-radius: 24px;
+}
+
+#results .benefits h3 {
+    margin: 0 0 30px;
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: -.03em;
+}
+
+#results .benefits ul {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#results .benefits li,
+#results .benefits li:first-child {
+    display: block;
+    padding: 22px 0 0;
+    border-top: 1px solid rgba(255,255,255,.15);
+}
+
+#results .benefits li > span {
+    display: block;
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+
+#results .benefits strong {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+#results .benefits p {
+    margin: 0;
+    color: #aeb4b0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* =====================================
+   TABLET
+   ===================================== */
+
+@media (max-width: 980px) {
+
+    #results .results-heading h2 {
+        font-size: clamp(28px, 4vw, 42px);
+        white-space: normal;
+    }
+
+    #results .benefits {
+        padding: 32px;
+    }
+
+    #results .benefits ul {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* =====================================
+   MOBILE
+   ===================================== */
 
 @media (max-width: 700px) {
 
@@ -599,15 +633,48 @@ section{padding:100px 0}
     }
 
     #results .results-heading h2 {
-        font-size: 42px;
+        font-size: clamp(28px, 7vw, 36px);
+        white-space: normal;
     }
 
     #results .results-description {
         font-size: 15px;
     }
 
+    #results .results-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    #results .results-video {
+        grid-column: 1;
+        grid-row: 1;
+        padding: 12px;
+    }
+
+    #results .comparison {
+        grid-column: 1;
+        grid-row: 2;
+        padding: 12px;
+    }
+
     #results .results-video-header h3,
     #results .results-photo-header h3 {
-        font-size: 23px;
+        font-size: 21px;
+    }
+
+    #results .benefits {
+        grid-column: 1;
+        grid-row: 3;
+        padding: 28px 22px;
+    }
+
+    #results .benefits h3 {
+        font-size: 25px;
+    }
+
+    #results .benefits ul {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 }
