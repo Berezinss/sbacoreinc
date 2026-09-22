@@ -620,6 +620,25 @@ section{padding:100px 0}
     #results .benefits ul {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+  #results .results-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+}
+
+#results .results-video {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#results .comparison {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#results .benefits {
+    grid-column: 1;
+    grid-row: 3;
+}
 }
 
 /* =====================================
@@ -678,3 +697,4 @@ section{padding:100px 0}
         gap: 20px;
     }
 }
+
