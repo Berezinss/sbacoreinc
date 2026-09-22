@@ -393,4 +393,50 @@ section{padding:100px 0}
     .form-step-heading h3{
         font-size:32px;
     }
+
+  /* REAL RESULTS — PHOTO + VIDEO */
+
+.results-media {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    min-width: 0;
+}
+
+.results-video {
+    width: 100%;
+    padding: 16px;
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 24px 60px rgba(0,0,0,.10);
+    overflow: hidden;
+}
+
+.results-video-header {
+    padding: 12px 8px 20px;
+}
+
+.video-label {
+    display: block;
+    color: #a97800;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .18em;
+    margin-bottom: 8px;
+}
+
+.results-video-header h3 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -.03em;
+}
+
+.results-video video {
+    width: 100%;
+    display: block;
+    border-radius: 16px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
 }
