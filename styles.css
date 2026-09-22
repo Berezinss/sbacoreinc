@@ -526,13 +526,12 @@ section{padding:100px 0}
    VIDEO AND PHOTO
    ===================================== */
 
-#results .results-video video {
+#results .results-video video,
+#results .comparison img {
     display: block;
     width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
-    object-fit: contain;
-    background: #101312;
+    height: 320px;
+    object-fit: cover;
     border-radius: 16px;
 }
 
@@ -695,6 +694,14 @@ section{padding:100px 0}
     #results .benefits ul {
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+  {
+
+    #results .results-video video,
+    #results .comparison img {
+        height: auto;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
     }
 }
 
