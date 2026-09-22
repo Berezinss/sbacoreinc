@@ -22,14 +22,14 @@ img{max-width:100%;display:block}
 .section-soft{background:var(--paper)}
 
 .site-header{position:sticky;top:0;z-index:30;background:rgba(13,15,16,.88);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.08)}
-.header-row{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.header-row{height:100px;display:flex;align-items:center;justify-content:space-between;gap:24px}
 .brand{display:flex;align-items:center;gap:13px;color:#fff;min-width:0}
-.brand-mark{width:46px;height:46px;display:grid;place-items:center;flex:0 0 auto;overflow:hidden;border-radius:10px}
+.brand-mark{width:76px;height:76px;display:grid;place-items:center;flex:0 0 auto;overflow:hidden;border-radius:10px}
 .brand-mark img{width:100%;height:100%;object-fit:contain;display:block}
-.brand-text{font-size:22px;letter-spacing:.02em;white-space:nowrap}
+.brand-text{font-size:30px;letter-spacing:.02em;white-space:nowrap}
 .brand-text strong{font-weight:900}
-.brand-text small{font-size:10px;margin-left:4px}
-.nav{display:flex;align-items:center;gap:26px;color:#d3d7d5;font-size:14px}
+.brand-text small{font-size:13px;margin-left:5px}
+.nav{display:flex;align-items:center;gap:20px;color:#d3d7d5;font-size:17px}
 .nav a:hover{color:#fff}
 .nav-portal{padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);color:#fff!important}.nav-portal:hover{background:rgba(255,255,255,.12)}
 .nav-cta{border:1px solid var(--gold);padding:10px 16px;border-radius:999px;color:var(--gold)!important}
@@ -239,5 +239,158 @@ section{padding:100px 0}
 .form-nav{display:flex;align-items:center;gap:12px;margin-top:auto;padding-top:28px;border-top:1px solid #ece6dc}.form-nav-spacer{flex:1}.form-back,.form-next{border:0;border-radius:999px;padding:13px 19px;font:inherit;font-size:14px;font-weight:850;cursor:pointer}.form-back{background:#ece7dc;color:#333835}.form-next{background:#151817;color:#fff;min-width:132px}.form-next span{color:var(--gold);margin-left:8px}.form-back:hover{background:#e2dccf}.form-next:hover{background:#242827}.submit-btn{border:0;cursor:pointer;min-width:210px}.submit-btn:disabled{opacity:.65;cursor:wait;transform:none}
 .form-privacy{margin:14px 0 0;color:#909591;font-size:11px;line-height:1.45}.form-status{margin-top:16px;border-radius:14px;font-size:14px;font-weight:750}.form-status.success{padding:16px 18px;background:#edf7ef;color:#205c2b;border:1px solid #c8e3cd}.form-status.error{padding:16px 18px;background:#fff0ed;color:#8e2b1c;border:1px solid #efc8c1}
 
-@media(max-width:980px){.estimate-shell{grid-template-columns:1fr;gap:34px}.estimate-intro{position:static}.estimate-benefit-list{grid-template-columns:repeat(3,1fr);border:0;gap:10px}.estimate-benefit-list>div{display:block;border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:16px}.estimate-benefit-list>div>span{display:block;margin-bottom:10px}.estimate-contact-card{max-width:420px}.estimate-panel{padding:20px}}
-@media(max-width:700px){.estimate-section{padding:76px 0}.estimate-intro h2{font-size:44px}.estimate-benefit-list{grid-template-columns:1fr}.estimate-panel{padding:12px;border-radius:24px}.estimate-form{padding:24px 18px 22px;border-radius:19px;min-height:auto}.form-grid.two-col,.service-choice-grid,.review-strip{grid-template-columns:1fr}.field-span-2{grid-column:auto}.review-strip div+div{border-left:0;border-top:1px solid #e1dacd}.form-progress{padding-bottom:18px}.progress-step small{font-size:9px}.form-nav{flex-wrap:wrap}.form-nav-spacer{display:none}.form-back,.form-next,.submit-btn{flex:1}.choice-row{display:grid;grid-template-columns:1fr 1fr}.form-step-heading h3{font-size:32px}}
+@media(max-width:980px){
+
+    /* HEADER */
+    .header-row{
+        height:100px;
+    }
+
+    .brand-mark{
+        width:76px;
+        height:76px;
+    }
+
+    .brand-text{
+        font-size:30px;
+    }
+
+    .brand-text small{
+        font-size:13px;
+    }
+
+    .nav{
+        top:100px;
+    }
+
+    /* ESTIMATE FORM */
+    .estimate-shell{
+        grid-template-columns:1fr;
+        gap:34px;
+    }
+
+    .estimate-intro{
+        position:static;
+    }
+
+    .estimate-benefit-list{
+        grid-template-columns:repeat(3,1fr);
+        border:0;
+        gap:10px;
+    }
+
+    .estimate-benefit-list>div{
+        display:block;
+        border:1px solid rgba(255,255,255,.1);
+        border-radius:16px;
+        padding:16px;
+    }
+
+    .estimate-benefit-list>div>span{
+        display:block;
+        margin-bottom:10px;
+    }
+
+    .estimate-contact-card{
+        max-width:420px;
+    }
+
+    .estimate-panel{
+        padding:20px;
+    }
+}
+
+@media(max-width:700px){
+
+    /* MOBILE HEADER */
+    .header-row{
+        height:78px;
+    }
+
+    .brand-mark{
+        width:54px;
+        height:54px;
+    }
+
+    .brand-text{
+        font-size:21px;
+    }
+
+    .brand-text small{
+        font-size:10px;
+    }
+
+    .nav{
+        top:78px;
+    }
+
+    /* MOBILE ESTIMATE FORM */
+    .estimate-section{
+        padding:76px 0;
+    }
+
+    .estimate-intro h2{
+        font-size:44px;
+    }
+
+    .estimate-benefit-list{
+        grid-template-columns:1fr;
+    }
+
+    .estimate-panel{
+        padding:12px;
+        border-radius:24px;
+    }
+
+    .estimate-form{
+        padding:24px 18px 22px;
+        border-radius:19px;
+        min-height:auto;
+    }
+
+    .form-grid.two-col,
+    .service-choice-grid,
+    .review-strip{
+        grid-template-columns:1fr;
+    }
+
+    .field-span-2{
+        grid-column:auto;
+    }
+
+    .review-strip div+div{
+        border-left:0;
+        border-top:1px solid #e1dacd;
+    }
+
+    .form-progress{
+        padding-bottom:18px;
+    }
+
+    .progress-step small{
+        font-size:9px;
+    }
+
+    .form-nav{
+        flex-wrap:wrap;
+    }
+
+    .form-nav-spacer{
+        display:none;
+    }
+
+    .form-back,
+    .form-next,
+    .submit-btn{
+        flex:1;
+    }
+
+    .choice-row{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+    }
+
+    .form-step-heading h3{
+        font-size:32px;
+    }
+}
